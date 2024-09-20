@@ -1,0 +1,64 @@
+/* Estilos para la barra de navegación */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #c0c0c0; /* Color del fondo del navbar */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between; /* Espacia los elementos al principio y al final */
+  }
+  
+  /* Contenedor del botón con fondo y sombra */
+  .start-button-container {
+    margin-top: -2px;
+    width: 60px; /* Ajusta el tamaño del contenedor según sea necesario */
+    height: 43px; /* Asegúrate de que el contenedor sea lo suficientemente alto para el botón */
+    background-color: #c0c0c0; /* Fondo del contenedor del botón */
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra oscura en el lado izquierdo y abajo */
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center; /* Centra el botón verticalmente */
+    border-radius: 3px; /* Opcional: Añade bordes redondeados al contenedor */
+    overflow: hidden; /* Asegura que el botón no sobresalga del contenedor */
+  }
+  
+  /* Estilos del botón tipo Windows 96 */
+  .start-button {
+    width: 40px; /* Ajusta el tamaño del botón según sea necesario */
+    height: 30px; /* Ajusta el tamaño del botón según sea necesario */
+    background-image: url('../images/windows98.png'); /* Reemplaza con el nombre correcto de la imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el botón */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer;
+    outline: none; /* Opcional: Elimina el borde de enfoque predeterminado */
+    background-color: transparent; /* Asegura que no haya fondo adicional */
+  }
+  
+  .start-button:hover {
+    opacity: 0.8; /* Opción para cambiar la apariencia al pasar el ratón */
+  }
+  
+  /* Contenedor para el reloj */
+  .clock-container {
+    margin-right: 30px;
+    background-color: #c0c0c0; /* Fondo del contenedor del reloj */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra oscura en el lado derecho y abajo */
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: 43px; /* Asegúrate de que el contenedor sea lo suficientemente alto */
+    border-radius: 3px; /* Opcional: Añade bordes redondeados al contenedor */
+  }
+  
+  /* Estilos del reloj */
+  .clock {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro, asegúrate de importar esta fuente */
+    font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #000; /* Color del texto del reloj */
+  }
+  

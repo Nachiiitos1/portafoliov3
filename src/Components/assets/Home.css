@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Fondo verde apagado */
+.home {
+  background-color: #509c8c;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor de los íconos */
+.icon-container {
+  display: flex;
+  gap: 40px;
+}
+
+/* Estilos individuales para cada ícono y texto */
+.icon-item {
+  text-align: center;
+  animation: float 3s ease-in-out infinite;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-item:hover {
+  background-color: rgba(167, 167, 167, 0.5);
+}
+
+.icon {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.icon-text {
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Animación de flotar leve */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Estilos del contenedor al estilo Windows 98 */
+.window-container {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 400px;
+  height: 300px;
+  background-color: #c0c0c0;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Estilos cuando está maximizado */
+.window-container.maximized {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Estilos cuando está minimizado */
+.window-container.minimized {
+  top: 100px;
+  left: 100px;
+  width: 400px;
+  height: 300px;
+}
+
+/* Cabecera de la ventana */
+.window-header {
+  background-color: #000080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+}
+
+/* Título de la ventana */
+.window-title {
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+/* Controles de la ventana (botones de maximizar y cerrar) */
+.window-controls button {
+  background-color: #c0c0c0;
+  border: none;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.window-controls button:hover {
+  background-color: #a0a0a0;
+}
+
+/* Contenido de la ventana */
+.window-content {
+  padding: 10px;
+  height: calc(100% - 30px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: padding 0.3s ease;
+}
+
+/* Contenido cuando está maximizado */
+.window-content.maximized-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Contenido cuando está minimizado */
+.window-content.minimized-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Secciones dentro de la ventana */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+/* Sección "Sobre Mi" */
+.section.sobre-mi {
+  gap: 10px;
+  flex-direction: row;
+}
+
+/* Sección "Sobre Mi" en estado minimizado */
+.window-content.minimized-content .section.sobre-mi {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Alinear el contenido de "Sobre Mi" */
+.section.sobre-mi .about-text {
+  flex: 1;
+  text-align: right;
+  font-size: 14px;
+}
+
+.window-content.minimized-content .section.sobre-mi .about-text {
+  text-align: center;
+}
+
+.section.sobre-mi .profile-pic {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.window-content.minimized-content .section.sobre-mi .profile-pic {
+  justify-content: center;
+}
+
+.profile-pic img {
+  width: 500px;
+  height: 500px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.window-content.minimized-content .profile-pic img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Estilos para las secciones "Mis Tecnologías", "Mis Proyectos" y "Contacto" */
+.section.tecnologias,
+.section.proyectos,
+.section.contacto {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .window-container.maximized {
+    width: 100vw;
+    height: 100vh;
+  }
+}
